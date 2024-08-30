@@ -1,0 +1,90 @@
+
+
+/* ==========================================================================
+  MEDIA QUERY MANAGER
+========================================================================== */
+
+@mixin respond($breakpoint)  {
+  @if $breakpoint == phone {
+    @media (max-width: $breakpoint-smartphone) { @content};
+    // MAX = 400px;
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content};
+    // MAX = 400px
+  }
+  @if $breakpoint == laptop {
+    @media (max-width: $breakpoint-laptop) { @content};
+    // MAX = 950px
+  }
+  @if $breakpoint == min-desktop {
+    @media (min-width: $breakpoint-laptop) { @content};
+  }
+  @if $breakpoint == desktop {
+    @media (max-width: $breakpoint-desktop) { @content};
+    // MAX = 1200px
+  }
+  @if $breakpoint == desktop-large {
+    @media (min-width: $breakpoint-desktop-large) { @content};
+    // MIN = 1200px
+  }
+}
+
+/* ==========================================================================
+  COLOR VARIABLES
+========================================================================== */
+
+$p-line-heigth: 1.7;
+$color-body-background: #F8F8F8;
+$color-navigation: #000;
+$color-gold-yellow: rgb(210, 169, 108);
+$color-css-shape: #d2a96c;
+
+
+/* ==========================================================================
+  BREAKPOINTS
+========================================================================== */
+
+$breakpoint-smartphone: 400px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 950px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-large: 1201px;
+
+//  @media screen and (max-width: $breakpoint-smartphone) {}
+
+
+/* ==========================================================================
+  FONTS
+========================================================================== */
+
+// SPÄTER FONT-SIZES FÜR ALLE ENDGERÄTE
+
+
+/* ==========================================================================
+  BASIC BODY STYLING
+========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-body-background;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 0 0 5vw;
+  margin: 0;
+
+  @include respond(laptop) {
+
+  }
+
+  @include respond(tablet) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include respond(phone) {
+
+  }
+}

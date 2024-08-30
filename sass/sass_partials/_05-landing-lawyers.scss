@@ -1,0 +1,110 @@
+
+
+/* ==========================================================================
+  LANDING LAWYERS STYLING
+========================================================================== */
+
+.landing-lawyers {
+  width: 60%;
+  margin: 150px auto;
+
+  @include respond(tablet) {
+    width: 100%;
+    margin: 75px 0;
+  }
+
+  &_lawyer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .info {
+      width: 50%;
+      align-self: center;
+      order: 1;
+
+      & h1 {
+        text-transform: uppercase;
+        letter-spacing: .6px;
+        font-size: 2.5rem;
+        margin: 10px 0 20px 0;
+
+        @include respond(tablet) {
+          font-size: 1.5rem;
+          margin: 10px 0 10px 0;
+        }
+      }
+
+      & hr {
+        width: 100px;
+        margin: 0px 0 60px 0;
+        background-color: $color-gold-yellow;
+        height: 3px;
+        border: 0;
+
+        @include respond(tablet) {
+          margin: 0px 0 30px 0;
+        }
+      }
+
+      & p {
+        font-size: 1.25rem;
+        line-height: $p-line-heigth;
+        letter-spacing: .4px;
+
+        @include respond(tablet) {
+          font-size: 1rem;
+        }
+      }
+
+      & p:last-child {
+        color: red;
+      }
+
+      & a {
+        border: none;
+        background-color: $color-gold-yellow;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+        padding: 15px 70px;
+        font-size: 1.1rem;
+        display: inline-block;
+        margin: 25px 0 0 0;
+
+        @include respond(tablet) {
+          padding: 8px 35px;
+          font-size: .9rem;
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+
+    & .image {
+      width: 40%;
+      order: 2;
+
+      & img {
+        width: 100%;
+        height: auto;
+        box-shadow: 10px 20px 20px #888888;
+      }
+    }
+  }
+
+  &_lawyer:not(:last-child) {
+    margin: 0 0 100px 0;
+  }
+
+  &_lawyer:nth-child(even){
+
+    & .info {
+      order: 4;
+    }
+
+    & .image {
+      order: 1;
+    }
+  }
+}
