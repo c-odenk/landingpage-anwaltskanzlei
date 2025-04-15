@@ -1,7 +1,6 @@
-#  Fiktive Anwaltskanzlei
-<br>
-Landingpage für eine fiktive Anwaltskanzlei. Hierbei handelt es sich um eines meiner ersten Projekte, welches ich zu lernzwecken umgesetzt habe. Es wurde nie veröffentlicht. 
-<br>
+#  ⚖️ Fiktive Anwaltskanzlei
+
+Diese Landingpage wurde im Rahmen eines Lernprojekts für eine fiktive Anwaltskanzlei entwickelt. Es handelt sich hierbei um eines meiner ersten Projekte, das ich zu Lernzwecken umgesetzt habe. Das Projekt wurde nie veröffentlicht.
 <br>
 <br>
 
